@@ -14,6 +14,12 @@ So to satisfy this demand, the API Gateway is developed, it is the only entry fo
 5. Simplifies the client by moving logic for calling multiple services from the client to API gateway
 6. Translates from a “standard” public web-friendly API protocol to whatever protocols are used internally 
 
+## API Gateway Open Source
+
+kong: https://github.com/Mashape/kong/   Notes: Written in Lua, recommended by nginx.
+tyk:  https://github.com/TykTechnologies/tyk   Notes: Written in Go.
+
+
 
 ## Reference
 
