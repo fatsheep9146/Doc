@@ -50,6 +50,26 @@ JSON map     -> map[string]interface{}
 
 附录2中有例子函数
 
+## JSON对象类型结构体声明tag技巧
+
+通常在声明某个JSON类型时，会在这个结构体的每一个字段后面加上tag来告诉JSON parser如何解析这个字段。
+
+通常形式就是
+```
+type Class struct {
+    Key1 string `json:"key1"`
+}
+```
+
+除了最基本形式，还可以指定一些其他信息表示一些其他的需求。下面是对这些常见用法的总结
+```
+Key1 string `json:"key1,omitempty"`  // 如果JSON对象中该域为零值，则JSON文本中不包含这个域的信息
+
+Key1 string `json:"-"` // 这个域将永远不会被包含到JSON文本中
+```
+
+
+
 
 ## 附录
 
